@@ -2,20 +2,20 @@
 import PackageDescription
 
 let package = Package(
-    name: "TNTKit", // 1. Tên package của bạn
+    name: "TNTKit",
     platforms: [
-        .iOS(.v13) // 2. Nền tảng và phiên bản tối thiểu bạn hỗ trợ
+        .iOS(.v12)
     ],
     products: [
         .library(
-            name: "TNTKit", // Tên thư viện khi người dùng import
+            name: "TNTKit",
             targets: ["TNTKit"])
     ],
     targets: [
         .binaryTarget(
-            name: "TNTKit", // Tên target, thường giống tên thư viện
-            url: "URL_CUA_FILE_ZIP", // 3. URL đến file .zip - SẼ CẬP NHẬT Ở BƯỚC 5
-            checksum: "62024e20deae774cbbd853311a87fe9ebe4793b7b41d63a4ca8fd7ad44dd1db6" // 4. Dán checksum bạn đã tính ở Bước 2 vào đây
+            name: "TNTKit",
+            url: "https://github.com/AnhGio/TNTKit/releases/download/1.0.0/TNTKit.xcframework.zip",
+            checksum: "62024e20deae774cbbd853311a87fe9ebe4793b7b41d63a4ca8fd7ad44dd1db6"
         )
     ]
 )
