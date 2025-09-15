@@ -1,21 +1,24 @@
-// swift-tools-version:5.3
+// swift-tools-version: 5.9
 import PackageDescription
+
+let version = "1.0.1"
+let checksum = "710d95a0bf83a478d32173e7b223e6dadd7206644b43f7a31aeb9109f7582608"
+
+let url = "https://github.com/AnhGio/TNTKit/releases/download/\(version)/TNTKit.xcframework.zip"
 
 let package = Package(
     name: "TNTKit",
-    platforms: [
-        .iOS(.v12)
-    ],
+    platforms: [.iOS(.v12)],
     products: [
         .library(
             name: "TNTKit",
-            targets: ["TNTKit"])
+            targets: ["TNTKit"]),
     ],
     targets: [
         .binaryTarget(
             name: "TNTKit",
-            url: "https://github.com/AnhGio/TNTKit/releases/download/1.0.1/TNTKit.xcframework.zip",
-            checksum: "62024e20deae774cbbd853311a87fe9ebe4793b7b41d63a4ca8fd7ad44dd1db6"
+            url: url,
+            checksum: checksum
         )
     ]
 )
